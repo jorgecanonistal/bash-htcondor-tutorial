@@ -1,4 +1,4 @@
-# bash-htcondor-tutorial
+# BASH & HTCondor Tutorial
 BASH and HTCondor tutorial for new lab members (Maruvka Lab).
 
 Created by Jorge Cano Nistal, PhD Candidate.
