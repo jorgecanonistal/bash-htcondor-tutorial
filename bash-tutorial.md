@@ -157,3 +157,30 @@ total 0
 drwxr-xr-x  2 username  staff    64B May 10 12:30 Folder4_2
 drwxr-xr-x  2 username  staff    64B May 10 12:30 Folder4_1
 ```
+As you can see, with both ways we get the same output.
+
+## Command Copy (cp):
+The command *cp* is used to copy files or directories from one location to another. Its syntax is really simple, you select the PATH of what you want to copy and you provide the PATH where you want to copy it.
+
+Let's create first one empty text file (**.txt** is the file extension of text files) in our folder. We will go over the commands to create new files later, so write the following text in your console for now without thinking too much about it.
+```console
+SystemName:Folder4$ touch hello_world.txt
+```
+Now that we have our text file created, why don't we copy it inside Folder4_1?
+As we are at the same directory our file -the one we want to copy- is, we only need to specify the file name first. After that, we will write the full PATH of the folder we want to copy it or the relative PATH to our current directory of the folder we want to copy it.
+
+In this case, as Folder4_1 is in the same directory we are at, we can do simply this:
+```console
+SystemName:Folder4$ cp hello_world.txt Folder4_1
+```
+Let's copy the same file, but now we are going to copy it in the Folder2_1.
+In this case, as Folder2_1 is not in the same directory we are at, we have to include the full PATH of the Folder2_1:
+```console
+SystemName:Folder4$ cp hello_world.txt /Users/username/Folder2/Folder2_1
+```
+Or we can also do it like this:
+```console
+SystemName:Folder4$ cp hello_world.txt ../Folder2/Folder2_1
+```
+
+## Commands to Create New Files (touch, >, >> and nano):
