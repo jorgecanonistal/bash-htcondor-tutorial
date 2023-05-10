@@ -1,7 +1,7 @@
 # BASH & HTCondor Tutorial
 *BASH and HTCondor tutorial for new lab members (Maruvka Lab).*
 
-Created by Jorge Cano Nistal, PhD Candidate.
+Created by Jorge Cano Nistal, PhD Candidate, 2023.
 
 
 
