@@ -184,3 +184,35 @@ SystemName:Folder4$ cp hello_world.txt ../Folder2/Folder2_1
 ```
 
 ## Commands to Create New Files (touch, >, >> and nano):
+In order to create new files, we have different options. 
+### 1. touch
+We can create empty files easily by using the *touch* command. The syntax is the same we used to create our *hello_world.txt* in the previous section of the tutorial. You need to write "touch FILENAME.EXT", where FILENAME is the name you want for your file and .EXT is the extension of the file you want to create. You do not need to repeat this command as we already used it earlier.
+```console
+SystemName:Folder4$ touch hello_world.txt
+```
+### 2. > and >> commands
+The **>** and **>>** commands are used to insert text on a file. We can insert text in a file like this, combining the *echo* command with the *>* command.
+```console
+SystemName:Folder4$ echo Hello, World! > hello_world.txt
+```
+The *>* command is used to write the text output of a command into a file. But remember, each time you use the *>* command, you rewrite the whole file.
+Let's test this. If we check the contents of our file with a new command we will explain later, called *cat*, we will see the behaviour of this command.
+```console
+SystemName:Folder4$ cat hello_world.txt
+Hello, World!
+SystemName:Folder4$ echo Hello, Friend! > hello_world.txt
+SystemName:Folder4$ cat hello_world.txt
+Hello, Friend!
+```
+As you can see, the file contents were rewritten. If we want to avoid this behaviour when we want to append text at the end of a file, we can use the append command, *>>*.
+The append command, *>>* appends a new line at the end of the file instead of rewritting its contents.
+```console
+SystemName:Folder4$ echo Hello, World! >> hello_world.txt
+SystemName:Folder4$ cat hello_world.txt
+Hello, Friend!
+Hello, World!
+```
+But, what if we can write a file like we well do with a text editor? For that we have the command *nano*. This command will open a new file with the name you want and you can write the way you would with a text editor. Check the bottom of the window that pops up to learn how to close and save the changes in a file using nano. It is pretty straight forward.
+```console
+SystemName:Folder4$ nano using_nano.txt
+```
