@@ -212,7 +212,11 @@ SystemName:Folder4$ cat hello_world.txt
 Hello, Friend!
 Hello, World!
 ```
-But, what if we can write a file like we well do with a text editor? For that we have the command *nano*. This command will open a new file with the name you want and you can write the way you would with a text editor. Check the bottom of the window that pops up to learn how to close and save the changes in a file using nano. It is pretty straight forward.
+But, what if we can write a file like we well do with a text editor? For that we have the command *nano*. This command will open a new file with the name you want and you can write the way you would with a text editor. Check the bottom of the window that pops up to learn how to close and save the changes in a file using nano. It is pretty straight forward. You just need to press the sequence of keys to close the file and, if you made changes to it, the tool will ask you if you want to save the file. Press 'y' for yes or 'n' for no, and then press Enter. Try to write 'This is my first time using nano command!' using *nano*.
 ```console
 SystemName:Folder4$ nano using_nano.txt
+SystemName:Folder4$ cat using_nano.txt
+This is my first time using nano command!
 ```
+## Commands to Print Contents of Files (cat, head, tail):
+The
