@@ -331,3 +331,37 @@ SystemName:Folder4$ tail -5 output.tsv
 19	1	3
 20	0	0
 ```
+## Command to Search and Print Patterns in Files (grep):
+The *grep* command is used to retrieve the information following a specific pattern or that includes a specific pattern in files.
+Imagine I am only interested in the line that contains the information of the number 15 in our *output.tsv* file. If I only want to print the information for that specific line, we can use grep to extract it.
+```console
+SystemName:Folder4$ grep 15 output.tsv
+15	1	3
+```
+So by using this function we can search a file for the lines that contains a specific string.
+This function can be used to search for complex string patterns as it allows to use regular expressions (regexes) as a pattern, but this is out of the scope of this tutorial. However, we will include one example of this for our *output.tsv* file. Imagine that we want to extract all the columns that contain the information of the numbers, without the header with the name of the columns. We can do it by using the following code with the *grep* function:
+```console
+SystemName:Folder4$ grep -E '^[0-9]+\t[0-9]+\t[0-9]+$' output.tsv
+1	1	1
+2	0	2
+3	1	3
+4	0	0
+5	1	1
+6	0	2
+7	1	3
+8	0	0
+9	1	1
+10	0	2
+11	1	3
+12	0	0
+13	1	1
+14	0	2
+15	1	3
+16	0	0
+17	1	1
+18	0	2
+19	1	3
+20	0	0
+```
+As you can notice, now we have the same file but without the line containing the headers.
+The expression **'^[0-9]+\t[0-9]+\t[0-9]+$'** is a regular expression (regex).
