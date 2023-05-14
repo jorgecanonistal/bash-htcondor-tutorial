@@ -365,4 +365,51 @@ SystemName:Folder4$ grep -E '^[0-9]+\t[0-9]+\t[0-9]+$' output.tsv
 ```
 As you can notice, now we have the same file but without the line containing the headers.
 The expression **'^[0-9]+\t[0-9]+\t[0-9]+$'** is a regular expression (regex).
-If you want to learn more about regular expressions you can do it through this link: [Regex](https://www.gnu.org/software/grep/manual/grep.html#Regular-Expressions).
+If you want to learn more about regular expressions you can do it through this link: [Learn more about regular expressions](https://www.gnu.org/software/grep/manual/grep.html#Regular-Expressions).
+
+## Command to Move files or folders to a different directory (move):
+The *move* command in bash (also known as *mv*) is used to move or rename files and directories. Unlike the *cp* command, the *mv* command will not keep a copy of the file in the original folder.
+### 1. Using *mv* to move a file to a different directory
+Let's move our *hello_world.txt* from the Folder4_1 to the directory named Folder4_2.
+Folder4_2 should be empty. Please, check that Folder4_2 does not have any not hidden files yet (using *ls* command).
+In order to do this we will do the following. Here we will use the relative PATH of the Folder4_2.
+```console
+SystemName:Folder4$ mv Folder4_1/hello_world.txt Folder4_2/
+```
+Once we have moved the file we can check that it is no longer in the Folder4_1 and it is instead in the Folder4_2 (check it yourself using *ls* command).
+
+### 2. Using *mv* command to rename files or folders
+We can also use the *mv* command to rename files or folders. We want to rename the *hello_world.txt* file that it is now inside of the Folder4_2. The new name should be *hello_friend.txt*. We can do it with the following syntax: **mv filename.ext newfilename.ext**.
+```console
+SystemName:Folder4$ mv Folder4_2/hello_world.txt Folder4_2/hello_friend.txt
+```
+After having done this step, let's rename our Folder4_2 folder. Its new name should be Greetings. We can do this following this syntax: **mv FolderName/ NewFolderName/**.
+```console
+SystemName:Folder4$ mv Folder4_2/ Greetings/
+```
+**IMPORTANT REMINDER:** It's important to note that if a file or directory with the same name already exists in the target_directory, it will be overwritten by the move command.
+
+## Command to Remove or Delete Files and Folders (rm):
+**IMPORTANT REMINDER:** This command is kind of dangerous. Once you have executed it, you will not be able to retrieve the files or folders you have deleted.
+
+The remove command, *rm* is used to delete files and directories.
+### 1. Deleting one single file using *rm*
+Let's delete the copy of *hello_world.txt* we created in our Folder2_1. If we want to remove this file we can do it in the following way:
+```console
+SystemName:Folder4$ rm ../Folder2/Folder2_1/hello_world.txt
+```
+### 2. Deleting several files using *rm*
+If we want to remove several files we can do it with the following syntax.
+```console
+SystemName:Folder4$ rm file1.txt file2.txt file3.txt
+```
+As you don't have this files created in your Folder4, create them using the touch command first and try to delete them after creating them.
+
+### 3. Deleting Folders
+When deleting folders we need to specify an argument to our remove function. This argument is the argument recursive (-r) and you need to be really careful when usng it. Deleting the wrong folder recursively may completely destroy all the information and functionality of your computer or system.
+Now that you now this, let's delete the Folder2, including all its files and subfolders if there are any.
+```console
+SystemName:Folder4$ rm -r ../Folder2/
+```
+
+## Concatenating commands in bash (|):
