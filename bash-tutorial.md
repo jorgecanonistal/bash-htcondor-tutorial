@@ -242,14 +242,14 @@ To check how the next functions (*head* and *tail*) work, we need to create a mo
 num_rows=20
 
 # Create the TSV file
-echo -e "Column1\tColumn2\tColumn3" > output.tsv
+echo "Column1\tColumn2\tColumn3" > output.tsv
 
 # Generate the data for each row
 for i in $(seq 1 $num_rows); do
   col1=$i
   col2=$(expr $i % 2)
   col3=$(expr $i % 4)
-  echo -e "$col1\t$col2\t$col3" >> output.tsv
+  echo "$col1\t$col2\t$col3" >> output.tsv
 done
 
 echo "File output.tsv generated successfully!"
