@@ -29,6 +29,11 @@ Now, let's imagine the structure in our HOME directory is the following: we have
     - Folder3_1
     - Folder3_2
 
+After writing and executing the command *cd* in your system, run the following command to create the previous folder structure in your HOME directory.
+```console
+SystemName:~ username$ mkdir Folder1 Folder2 Folder3 && mkdir Folder1/Folder1_1 Folder1/Folder1_2 Folder2/Folder2_1 Folder2/Folder2_2 Folder3/Folder3_1 Folder3/Folder3_2
+```
+
 ### 2. cd PATH
 In order to go to *Folder3_1* from our HOME directory we need to use *cd* in the following way and press Enter after that.
 
