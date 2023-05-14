@@ -365,3 +365,4 @@ SystemName:Folder4$ grep -E '^[0-9]+\t[0-9]+\t[0-9]+$' output.tsv
 ```
 As you can notice, now we have the same file but without the line containing the headers.
 The expression **'^[0-9]+\t[0-9]+\t[0-9]+$'** is a regular expression (regex).
+If you want to learn more about regular expressions you can do it through this link: [Regex](https://www.gnu.org/software/grep/manual/grep.html#Regular-Expressions).
