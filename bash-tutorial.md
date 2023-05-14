@@ -263,7 +263,7 @@ We can view the whole file by running the cat command and check its structure.
 ```console
 SystemName:Folder4$ cat output.tsv
 Column1	Column2	Column3
-1 1	1
+1	1	1
 2	0	2
 3	1	3
 4	0	0
