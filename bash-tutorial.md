@@ -217,7 +217,7 @@ But, what if we can write a file like we well do with a text editor? For that we
 SystemName:Folder4$ nano using_nano.txt
 ```
 Let's write and save our txt file. We want to write the following line inside of it: This is my first time using nano command!
-
+![Using nano to create new text files.](images/usingnano.png "How to use nano?")
 It is pretty straight forward. You just need to press the sequence of keys to close the file and, if you made changes to it, the tool will ask you if you want to save the file. Press 'y' for yes or 'n' for no, and then press Enter. Try to write 'This is my first time using nano command!' using *nano*.
 ```console
 SystemName:Folder4$ cat using_nano.txt
