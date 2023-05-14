@@ -38,7 +38,7 @@ SystemName:~ username$ mkdir Folder1 Folder2 Folder3 && mkdir Folder1/Folder1_1 
 In order to go to *Folder3_1* from our HOME directory we need to use *cd* in the following way and press Enter after that.
 
 ```console
-System:~ username$ cd Folder3/Folder3_1
+SystemName:~ username$ cd Folder3/Folder3_1
 ```
 After executing the command we will see the following in our console, indicating the folder we are in:
 ```console
