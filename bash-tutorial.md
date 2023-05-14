@@ -259,7 +259,7 @@ Once we have this file created, we will run it in our computer with the followin
 SystemName:Folder4$ sh random_tsv.sh
 File output.tsv generated successfully!
 ```
-We can view the whole file by running the cat command and check its structure.
+We can view the whole file by running the *cat* command and check its structure.
 ```console
 SystemName:Folder4$ cat output.tsv
 Column1	Column2	Column3
@@ -278,6 +278,53 @@ Column1	Column2	Column3
 13	1	1
 14	0	2
 15	1	3
+16	0	0
+17	1	1
+18	0	2
+19	1	3
+20	0	0
+```
+Let's see what the functions *head* and *tail* do. These functions will print by default the first (*head*) or last (*tail*) lines of a file. They can take one numeric argument to customize the number of lines we want them to print. This argument is written in the following syntax: a dash (-) followed by the number of lines we want the function to print.
+The *head* function by default will return the following:
+```console
+SystemName:Folder4$ head output.tsv
+Column1	Column2	Column3
+1	1	1
+2	0	2
+3	1	3
+4	0	0
+5	1	1
+6	0	2
+7	1	3
+8	0	0
+9	1	1
+```
+If we add an argument to ask the function to print 5 lines, it will return the following:
+```console
+SystemName:Folder4$ head -5 output.tsv
+Column1	Column2	Column3
+1	1	1
+2	0	2
+3	1	3
+4	0	0
+```
+The *tail* function works the same way. By default it will return the last 10 lines of the file, like here:
+```console
+SystemName:Folder4$ tail output.tsv
+11	1	3
+12	0	0
+13	1	1
+14	0	2
+15	1	3
+16	0	0
+17	1	1
+18	0	2
+19	1	3
+20	0	0
+```
+If we add an argument to ask the function to print the last 5 lines, it will return the following:
+```console
+SystemName:Folder4$ tail -5 output.tsv
 16	0	0
 17	1	1
 18	0	2
