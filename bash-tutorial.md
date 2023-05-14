@@ -219,9 +219,68 @@ SystemName:Folder4$ nano using_nano.txt
 Let's write and save our txt file. We want to write the following line inside of it: This is my first time using nano command!
 ![Using nano to create new text files.](images/usingnano.png "How to use nano?")
 It is pretty straight forward. You just need to press the sequence of keys to close the file and, if you made changes to it, the tool will ask you if you want to save the file. Press 'y' for yes or 'n' for no, and then press Enter. Try to write 'This is my first time using nano command!' using *nano*.
+
+After having created and save the file, we can see the contents of the file and check if we did it correctly with one of the functions we will learn in the next part of the tutorial: *cat*.
 ```console
 SystemName:Folder4$ cat using_nano.txt
 This is my first time using nano command!
 ```
 ## Commands to Print Contents of Files (cat, head, tail):
-The
+There are a few functions to print the contents of the files and show them in the terminal as an output text. Depending on what we want to print we can use different functions.
+### 1. cat
+The function *cat* prints all the contents of a file in the terminal screen. When a text file is small, this is not a problem, but if we have a huge file, this is not convenient. As we checked in the previous section, we can print the contents of our *using_nano.txt* file with *cat* like this:
+```console
+SystemName:Folder4$ cat using_nano.txt
+This is my first time using nano command!
+```
+### 2. head and tail
+To check how the next functions (*head* and *tail*) work, we need to create a more complex text file. Do not worry, I will guide you step by step on how to do this. First we need to use the nano command to create a SHELL file called random_tsv.sh with the following contents (just copy this code inside of the nano screen and save the file):
+```console
+#!/bin/bash
+
+# Define the number of rows to generate
+num_rows=20
+
+# Create the TSV file
+echo -e "Column1\tColumn2\tColumn3" > output.tsv
+
+# Generate the data for each row
+for i in $(seq 1 $num_rows); do
+  col1=$i
+  col2=$(expr $i % 2)
+  col3=$(expr $i % 4)
+  echo -e "$col1\t$col2\t$col3" >> output.tsv
+done
+
+echo "File output.tsv generated successfully!"
+```
+Once we have this file created, we will run it in our computer with the following command. Once the run is finished we will see in the command line the folllowing line printed: "File output.tsv generated successfully!".
+```console
+SystemName:Folder4$ sh random_tsv.sh
+File output.tsv generated successfully!
+```
+We can view the whole file by running the cat command and check its structure.
+```console
+SystemName:Folder4$ cat output.tsv
+Column1	Column2	Column3
+1 1	1
+2	0	2
+3	1	3
+4	0	0
+5	1	1
+6	0	2
+7	1	3
+8	0	0
+9	1	1
+10	0	2
+11	1	3
+12	0	0
+13	1	1
+14	0	2
+15	1	3
+16	0	0
+17	1	1
+18	0	2
+19	1	3
+20	0	0
+```
